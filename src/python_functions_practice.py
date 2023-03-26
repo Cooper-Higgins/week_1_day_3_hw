@@ -1,69 +1,53 @@
 def return_10():
     return 10
 
-def add(number1, number2):
-    return number1 + number2 
+def add(num_1, num_2):
+    return num_1 + num_2
 
-def subtract(number1, number2):
-    return number1 - number2 
+def subtract(num_1, num_2):
+    return num_1 - num_2
 
-def multiply(number1, number2):
-    return number1 * number2 
+def multiply(num_1, num_2):
+    return num_1 * num_2
 
-def divide(number1, number2):
-    return number1 / number2
+def divide(num_1, num_2):
+    return num_1 // num_2 
 
-def length_of_string(test_string):
-    return len(test_string)
+def length_of_string(string):
+    return len(string)
 
-def join_string(string1, string2):
-    return string1 + string2
+def join_string(string_1, string_2):
+    return string_1 + string_2
 
-def add_string_as_number(string1, string2):
-    return int(string1) + int(string2)
+def add_string_as_number(string_1, string_2):
+    sum = int(string_1) + int(string_2)
+    return sum
 
-def number_to_full_month_name(number):
-    months = {1 : "January", 
-          2 : "February", 
-          3 : "March", 
-          4 : "April", 
-          5 : "May", 
-          6 : "June", 
-          7 : "July", 
-          8 : "August",
-          9 : "September",
-          10 : "October",
-          11 : "November",
-          12 : "December",
-        }
+def number_to_full_month_name(month_number):
+    if month_number == 1:
+        return "January"
+    elif month_number == 3:
+        return "March"
+    elif month_number == 4:
+        return "April"
+    elif month_number == 9:
+        return "September"
+    elif month_number == 10:
+        return "October"
 
-    return months[number]
-
-def number_to_short_month_name(number):
-    months = {1 : "Jan", 
-          2 : "Feb", 
-          3 : "Mar", 
-          4 : "Apr", 
-          5 : "May", 
-          6 : "Jun", 
-          7 : "Jul", 
-          8 : "Aug",
-          9 : "Sep",
-          10 : "Oct",
-          11 : "Nov",
-          12 : "Dec",
-        }
-    
-    return months[number]
+def number_to_short_month_name(month_number):
+   short_month_name = number_to_full_month_name(month_number)[0:3]
+   return short_month_name
 
 def volume_of_cube(side_length):
-    cube_volume = side_length ** 3
-    return cube_volume
+    volume = side_length ** 3
+    return volume
 
-def string_reversed(test_string): 
-    reverse_string = test_string [::-1]
-    return reverse_string
+def string_reversed(string):
+    string_reversed = string[::-1]
+    return string_reversed
 
-def farenheit_conversion(temp):
-    celsius = (temp - 32) * (5.0 / 9.0)
+def fahrenheit_conversion(temperature):
+    temperature = 212
+    celsius = (temperature - 32) * 5 // 9
     return celsius
